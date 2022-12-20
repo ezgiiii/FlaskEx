@@ -1,12 +1,18 @@
-<h1>Hello World!</h1>
-<p>This is my first Flask web page</p>
-<p>My name is {{first_name|title}}</p>
-<p>{{stuff|safe}}</p>
+{% extends 'base.html' %}
 
-<h3>Favorite Pizza</h3>
-{% for topping in fav_pizza %}
-    {{topping}} <br/>
-{% endfor %}
+{% block content %}
+    <h1>Hello World!</h1>
+    <p>This is my first Flask web page</p>
+    <p>My name is {{first_name|title}}</p>
+    <p>{{stuff|safe}}</p>
 
-<br/><br/>
-{{ fav_pizza.7 +4 }}
+    <h3>Favorite Pizza</h3>
+    {% for topping in fav_pizza %}
+        {{topping}} <br/>
+    {% endfor %}
+
+    <br/><br/>
+
+{% endblock %}
+
+
